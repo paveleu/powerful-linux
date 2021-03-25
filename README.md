@@ -1,2 +1,21 @@
-# powerful-linux
-My own linux helper
+## Powerful linux
+ _My own linux helper_
+ 
+ ## Detect Linux Distro
+
+Using `uname`
+```sh
+> uname -a
+Darwin MacBook-Pro-Pawe.local 19.6.0 Darwin Kernel Version 19.6.0: Thu Oct 29 22:56:45 PDT 2020; root:xnu-6153.141.2.2~1/RELEASE_X86_64 x86_64
+```
+
+Using `cat`
+```sh
+> cat /etc/*release
+SUSE LINUX Enterprise Server 9 (i586)
+VERSION = 9
+PATCHLEVEL = 3
+
+> cat /etc/issue
+Welcome to SUSE LINUX Enterprise Server 9 (i586) - Kernel \r (\l).
+```
