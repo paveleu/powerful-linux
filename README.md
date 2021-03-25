@@ -1,7 +1,7 @@
 ## Powerful linux
  _My own linux helper_
  
- ## Detect Linux Distro
+## Detect Linux Distro
 
 Using `uname`
 ```sh
@@ -18,4 +18,35 @@ PATCHLEVEL = 3
 
 > cat /etc/issue
 Welcome to SUSE LINUX Enterprise Server 9 (i586) - Kernel \r (\l).
+```
+
+
+## Loops in bash
+
+FOR
+```sh
+#!/bin/bash
+echo "Bash version ${BASH_VERSION}..."
+for i in {0..10..2}; do 
+     echo "Welcome $i times"
+done
+```
+
+```sh
+#!/bin/bash
+for (( c=1; c<=5; c++ )); do  
+   echo "Welcome $c times"
+done
+```
+```sh
+#!/bin/bash
+for file in /etc/*
+do
+	if [ "${file}" == "/etc/resolv.conf" ]
+	then
+		countNameservers=$(grep -c nameserver /etc/resolv.conf)
+		echo "Total  ${countNameservers} nameservers defined in ${file}"
+		break
+	fi
+done
 ```
